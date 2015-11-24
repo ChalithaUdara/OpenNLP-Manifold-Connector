@@ -2,6 +2,7 @@ package org.apache.manifoldcf.agents.transformation.opennlp;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -136,7 +137,7 @@ public class OpenNlpExtractor extends BaseTransformationConnector {
 		Map<String, List<String>> nerMap = new HashMap<>();
 
 		if (document.getBinaryLength() > 0) {
-			String textContent = new String(bytes);
+			String textContent = new String(bytes, StandardCharsets.UTF_8);
 			List<String> peopleList = new ArrayList<>();
 			List<String> locationsList = new ArrayList<>();
 			List<String> organizationsList = new ArrayList<>();
