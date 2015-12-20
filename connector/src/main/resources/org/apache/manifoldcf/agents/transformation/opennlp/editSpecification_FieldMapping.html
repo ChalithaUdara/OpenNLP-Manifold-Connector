@@ -24,47 +24,49 @@ ${SEQNUM} == ${SELECTEDNUM})
 		<td class="separator" colspan="2"><hr /></td>
 	</tr>
 	<tr>
-		<td class="description"><nobr>$Encoder.bodyEscape($ResourceBundle.getString('OpenNlpExtractor.NerExtraction'))</nobr></td>
-	</tr>
-	<tr>
-		<td class="description"><nobr>$Encoder.bodyEscape($ResourceBundle.getString('OpenNlpExtractor.ExtractPeople'))</nobr></td>
-		<td class="value">#if($EXTRACTPEOPLE == 'true') <input
-			type="checkbox" checked="true" name="s${SEQNUM}_extractpeople"
-			value="true" /> #else <input type="checkbox"
-			name="s${SEQNUM}_extractpeople" value="true" /> #end
-		</td>
+		<td class="description"><nobr>$Encoder.bodyEscape($ResourceBundle.getString('OpenNlpExtractor.SentenceDetectorModelPath'))</nobr></td>
+		<td class="value"><input type="text" name="s${SEQNUM}_smodelpath"
+			size="128" value="$Encoder.attributeEscape($SMODELPATH)" /></td>
 	</tr>
 	<tr>
 		<td class="separator" colspan="2"><hr /></td>
 	</tr>
 	<tr>
-		<td class="description"><nobr>$Encoder.bodyEscape($ResourceBundle.getString('OpenNlpExtractor.ExtractLocations'))</nobr></td>
-		<td class="value">#if($EXTRACTLOCATIONS == 'true') <input
-			type="checkbox" checked="true" name="s${SEQNUM}_extractlocations"
-			value="true" /> #else <input type="checkbox"
-			name="s${SEQNUM}_extractlocations" value="true" /> #end
-		</td>
+		<td class="description"><nobr>$Encoder.bodyEscape($ResourceBundle.getString('OpenNlpExtractor.TokenizerModelPath'))</nobr></td>
+		<td class="value"><input type="text" name="s${SEQNUM}_tmodelpath"
+			size="128" value="$Encoder.attributeEscape($TMODELPATH)" /></td>
 	</tr>
 	<tr>
 		<td class="separator" colspan="2"><hr /></td>
 	</tr>
 	<tr>
-		<td class="description"><nobr>$Encoder.bodyEscape($ResourceBundle.getString('OpenNlpExtractor.ExtractOraganizations'))</nobr></td>
-		<td class="value">#if($EXTRACTORGANIZATIONS == 'true') <input
-			type="checkbox" checked="true" name="s${SEQNUM}_extractorganizations"
-			value="true" /> #else <input type="checkbox"
-			name="s${SEQNUM}_extractorganizations" value="true" /> #end
-		</td>
+		<td class="description"><nobr>$Encoder.bodyEscape($ResourceBundle.getString('OpenNlpExtractor.PeopleModelPath'))</nobr></td>
+		<td class="value"><input type="text" name="s${SEQNUM}_pmodelpath"
+			size="128" value="$Encoder.attributeEscape($PMODELPATH)" /></td>
 	</tr>
-	
+	<tr>
+		<td class="separator" colspan="2"><hr /></td>
+	</tr>
+	<tr>
+		<td class="description"><nobr>$Encoder.bodyEscape($ResourceBundle.getString('OpenNlpExtractor.LocationsModelPath'))</nobr></td>
+		<td class="value"><input type="text" name="s${SEQNUM}_lmodelpath"
+			size="128" value="$Encoder.attributeEscape($LMODELPATH)" /></td>
+	</tr>
+	<tr>
+		<td class="separator" colspan="2"><hr /></td>
+	</tr>
+	<tr>
+		<td class="description"><nobr>$Encoder.bodyEscape($ResourceBundle.getString('OpenNlpExtractor.OraganizationsModelPath'))</nobr></td>
+		<td class="value"><input type="text" name="s${SEQNUM}_omodelpath"
+			size="128" value="$Encoder.attributeEscape($OMODELPATH)" /></td>
+	</tr>
+
 </table>
 
 #else
-<input type="hidden" name="s${SEQNUM}_extractpeople"
-	value="$Encoder.bodyEscape($EXTRACTPEOPLE)" />
-<input type="hidden" name="s${SEQNUM}_extractlocations"
-	value="$Encoder.bodyEscape($EXTRACTLOCATIONS)" />
-<input type="hidden" name="s${SEQNUM}_extractorganizations"
-	value="$Encoder.bodyEscape($EXTRACTORGANIZATIONS)" />
-
+<input type="hidden" name="s${SEQNUM}_smodelpath" value="$Encoder.bodyEscape($SMODELPATH)"/>
+<input type="hidden" name="s${SEQNUM}_tmodelpath" value="$Encoder.bodyEscape($TMODELPATH)"/>
+<input type="hidden" name="s${SEQNUM}_pmodelpath" value="$Encoder.bodyEscape($PMODELPATH)"/>
+<input type="hidden" name="s${SEQNUM}_lmodelpath" value="$Encoder.bodyEscape($LMODELPATH)"/>
+<input type="hidden" name="s${SEQNUM}_omodelpath" value="$Encoder.bodyEscape($OMODELPATH)"/>
 #end
