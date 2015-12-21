@@ -34,9 +34,9 @@ In order to extract named entities with OpenNLP, you first need to download the 
 sh download-models.sh
 ```
 
-This will download models to resources/nlpmodels directory.
+This will download models to nlpmodels directory.
 
-Then you need to copy **resources** directory to **$MANIFOLD_DIR/example** directory
+In manifoldcf job configuration, you need to configure paths to corresponding models.  
 
 
 

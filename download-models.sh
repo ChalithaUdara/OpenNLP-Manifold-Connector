@@ -1,10 +1,10 @@
 #!/bin/bash
 
-MODELS_DIR=resources/nlpmodels
+MODELS_DIR=nlpmodels
 
 if [ ! -d "$MODELS_DIR" ]; then
-  echo “resources/nlpmodels does not exist…”
-  echo “creating resources/nlpmodels …”
+  echo “$MODELS_DIR does not exist…”
+  echo “creating $MODELS_DIR …”
   mkdir -p ${MODELS_DIR}
 fi
 
